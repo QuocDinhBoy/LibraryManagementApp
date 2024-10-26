@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myjavafxapp.SceneController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Button layoutX="325.0" layoutY="25.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="LOGO" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="575.0" layoutY="150.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="UPDATE DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="FIND DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="362.5" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="575.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="ADD USER" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="150.0" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="BORROW DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="363.5" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="RETURN DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="575.0" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY USER INFO" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToAddDocumentScene" prefHeight="100.0" prefWidth="175.0" text="ADD DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="362.5" layoutY="150.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="REMOVE DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/picture/9131529.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
