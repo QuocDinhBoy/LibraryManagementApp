@@ -10,7 +10,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
       <Button layoutX="325.0" layoutY="25.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="LOGO" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="575.0" layoutY="150.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="UPDATE DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="575.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToUpdateDocumentScene" prefHeight="100.0" prefWidth="175.0" text="UPDATE DOCUMENT" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="FIND DOCUMENT" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="362.5" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY DOCUMENT" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="575.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="ADD USER" textAlignment="CENTER" wrapText="true" />
@@ -18,10 +18,10 @@
       <Button layoutX="363.5" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="RETURN DOCUMENT" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="575.0" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY USER INFO" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToAddDocumentScene" prefHeight="100.0" prefWidth="175.0" text="ADD DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="362.5" layoutY="150.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="REMOVE DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="362.5" layoutY="150.0" mnemonicParsing="false" onAction="#switchToRemoveDocumentScene" prefHeight="100.0" prefWidth="175.0" text="REMOVE DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <ImageView disable="true" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/picture/9131529.png" />
+            <Image url="@../../../../java/org/example/myjavafxapp/9131529.png" />
          </image>
       </ImageView>
    </children>

@@ -12,13 +12,36 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class SceneController {
-    @FXML
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     public void switchToAddDocumentScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("addDocumentScene.fxml"));
+        root = FXMLLoader.load(getClass().getResource("addDocumentScene.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void returnCenterScene(ActionEvent event) throws  IOException {
+        root = FXMLLoader.load(getClass().getResource("centerScene.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToRemoveDocumentScene(ActionEvent event) throws  IOException {
+        root = FXMLLoader.load(getClass().getResource("removeDocumentScene.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToUpdateDocumentScene(ActionEvent event) throws  IOException {
+        root = FXMLLoader.load(getClass().getResource("updateDocumentScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
