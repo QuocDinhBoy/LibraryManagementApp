@@ -7,18 +7,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myjavafxapp.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myjavafxapp.AddDocumentController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
       <Text layoutX="200.0" layoutY="85.0" text="Enter Document ID">
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField layoutX="200.0" layoutY="100.0" prefHeight="50.0" prefWidth="500" promptText="EX: 000001">
+      <TextField fx:id="DocumentIDField" layoutX="200.0" layoutY="100.0" prefHeight="50.0" prefWidth="500" promptText="EX: 000001">
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <TextField layoutX="200.0" layoutY="200.0" prefHeight="50.0" prefWidth="500" promptText="EX: Harry Potter">
+      <TextField fx:id="DocumentNameField" layoutX="200.0" layoutY="200.0" prefHeight="50.0" prefWidth="500" promptText="EX: Harry Potter">
          <font>
             <Font size="16.0" />
          </font></TextField>
@@ -26,7 +26,7 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField layoutX="200.0" layoutY="300.0" prefHeight="50.0" prefWidth="500" promptText="EX: J. K. Rowling">
+      <TextField fx:id="DocumentAuthorField" layoutX="200.0" layoutY="300.0" prefHeight="50.0" prefWidth="500" promptText="EX: J. K. Rowling">
          <font>
             <Font size="16.0" />
          </font></TextField>
@@ -34,7 +34,7 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <TextField layoutX="200.0" layoutY="400.0" prefHeight="50.0" prefWidth="500" promptText="EX: 50">
+      <TextField fx:id="DocumentQuantityField" layoutX="200.0" layoutY="400.0" prefHeight="50.0" prefWidth="500" promptText="EX: 50">
          <font>
             <Font size="16.0" />
          </font></TextField>
@@ -42,7 +42,7 @@
          <font>
             <Font size="18.0" />
          </font></Text>
-      <Button layoutX="375" layoutY="500.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ADD DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="760.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnCenterScene" onMousePressed="#returnCenterScene" prefHeight="25.0" prefWidth="25.0" style="-fx-background-image: url(https://cdn.icon-icons.com/icons2/2596/PNG/512/return_icon_154912.png); -fx-background-size: 25px 25px; -fx-background-repeat: none;" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="375.0" layoutY="500.0" mnemonicParsing="false" onAction="#addDocumentButton" prefHeight="50.0" prefWidth="150.0" text="ADD DOCUMENT" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="760.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnCenterScene" prefHeight="25.0" prefWidth="25.0" style="-fx-background-image: url(https://cdn.icon-icons.com/icons2/2596/PNG/512/return_icon_154912.png); -fx-background-size: 25px 25px; -fx-background-repeat: none;" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>
