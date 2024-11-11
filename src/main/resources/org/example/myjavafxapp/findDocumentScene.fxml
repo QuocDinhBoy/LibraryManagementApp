@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myjavafxapp.FindDocumentController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="130.0" stylesheets="@application.css">
+         <children>
+            <Line endX="58.19999694824219" layoutX="59.0" layoutY="178.0" startX="-46.9999885559082" stroke="WHITE" />
+            <Button layoutX="26.0" layoutY="534.0" mnemonicParsing="false" onAction="#exit" styleClass="logout" stylesheets="@application.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="20" text="" />
+               </graphic>
+            </Button>
+            <Label layoutX="65.0" layoutY="538.0" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="15.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@photo-library-icon-3.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="34.0" layoutY="142.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="findbyid" layoutY="255.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="130.0" styleClass="left2button3" stylesheets="@application.css" text="Find By ID" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="findbyname" layoutY="287.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="130.0" styleClass="left2button2" stylesheets="@application.css" text="Find By Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="left2" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane fx:id="byNameAnchorPane" layoutX="165.0" layoutY="60.0" prefHeight="520.0" prefWidth="600.0" stylesheets="@application.css" visible="false">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <TextField fx:id="searchField" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="250.0" promptText="Search by Name" styleClass="search" stylesheets="@application.css" />
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="14.0" layoutY="32.0" size="20" wrappingWidth="12.0" />
+            <TableView fx:id="table" layoutX="40.0" layoutY="88.0" prefHeight="400.0" prefWidth="520.0">
+              <columns>
+                <TableColumn fx:id="id_column" maxWidth="80.0" minWidth="80.0" text="ID" />
+                <TableColumn fx:id="name_column" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Name" />
+                  <TableColumn fx:id="author_column" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Author" />
+                  <TableColumn fx:id="quantity_column" maxWidth="78.0" minWidth="78.0" prefWidth="78.0" text="Quantity" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="750.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnCenterScene" prefHeight="25.0" prefWidth="25.0" styleClass="left2button" stylesheets="@application.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="20" />
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="byIdAnchorPane" layoutX="165.0" layoutY="60.0" prefHeight="520.0" prefWidth="600.0" stylesheets="@application.css">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+         <children>
+            <TextField fx:id="searchField1" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="250.0" promptText="Search by ID" styleClass="search" stylesheets="@application.css" />
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="14.0" layoutY="32.0" size="20" wrappingWidth="12.0" />
+            <TableView fx:id="table1" layoutX="40.0" layoutY="88.0" prefHeight="400.0" prefWidth="520.0">
+               <columns>
+                  <TableColumn fx:id="id_column1" maxWidth="80.0" minWidth="80.0" text="ID" />
+                  <TableColumn fx:id="name_column1" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Name" />
+                  <TableColumn fx:id="author_column1" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" text="Author" />
+                  <TableColumn fx:id="quantity_column1" maxWidth="78.0" minWidth="78.0" prefWidth="78.0" text="Quantity" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

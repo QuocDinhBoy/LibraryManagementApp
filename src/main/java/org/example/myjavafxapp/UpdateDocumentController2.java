@@ -1,5 +1,6 @@
 package org.example.myjavafxapp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -98,5 +99,10 @@ public class UpdateDocumentController2 {
         DocumentNameField.setPromptText(document.getName());
         DocumentAuthorField.setPromptText(document.getAuthor());
         DocumentQuantityField.setPromptText(Integer.toString(document.getQuantity()));
+    }
+
+    public void exit(ActionEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
 }

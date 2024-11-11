@@ -1,5 +1,6 @@
 package org.example.myjavafxapp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -91,5 +92,11 @@ public class AddDocumentController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void exit(ActionEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
 }

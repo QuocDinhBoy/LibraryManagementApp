@@ -1,5 +1,6 @@
 package org.example.myjavafxapp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -53,7 +54,7 @@ public class RemoveDocumentController {
             DocumentIDField.clear();
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Document Removed");
-            alert.setHeaderText("Are you sure you want to remove this document?");
+            alert.setHeaderText("Are you sure want to remove this document?");
             alert.setContentText(
                     "Document ID: " + documentToRemove.getId() + "\n" +
                             "Name: " + documentToRemove.getName() + "\n" +
@@ -86,5 +87,10 @@ public class RemoveDocumentController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void exit(ActionEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
 }

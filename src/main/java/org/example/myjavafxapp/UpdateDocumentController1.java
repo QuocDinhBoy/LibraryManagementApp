@@ -1,5 +1,6 @@
 package org.example.myjavafxapp;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -67,5 +68,10 @@ public class UpdateDocumentController1 {
             stage.setScene(scene);
             stage.show();
         }
+    }
+
+    public void exit(ActionEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
 }

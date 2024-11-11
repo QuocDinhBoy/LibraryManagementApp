@@ -1,28 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.myjavafxapp.SceneController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-      <Button layoutX="325.0" layoutY="25.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" text="LOGO" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="575.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToUpdateDocumentScene" prefHeight="100.0" prefWidth="175.0" text="UPDATE DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="150.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="FIND DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="363.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="575.0" layoutY="300.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="ADD USER" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="150.0" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="BORROW DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="363.5" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="RETURN DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="575.0" layoutY="450.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" text="DISPLAY USER INFO" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="150.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToAddDocumentScene" prefHeight="100.0" prefWidth="175.0" text="ADD DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="363.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToRemoveDocumentScene" prefHeight="100.0" prefWidth="175.0" text="REMOVE DOCUMENT" textAlignment="CENTER" wrapText="true" />
-      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+      <AnchorPane prefHeight="600.0" prefWidth="130.0" stylesheets="@application.css">
+         <children>
+            <Label layoutX="34.0" layoutY="117.0" text="Welcome," textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="137.0" text="Dinh Quoc" textFill="#60efb6">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+            <Line endX="58.19999694824219" layoutX="59.0" layoutY="178.0" startX="-46.9999885559082" stroke="WHITE" />
+            <Button layoutX="26.0" layoutY="534.0" mnemonicParsing="false" onAction="#exit" styleClass="logout" stylesheets="@application.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="20" />
+               </graphic>
+            </Button>
+            <Label layoutX="65.0" layoutY="538.0" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="34.0" layoutY="105.0" size="80" text="" />
+         </children>
+         <styleClass>
+            <String fx:value="left1" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="152.5" layoutY="140.0" prefHeight="420.0" prefWidth="625.0" stylesheets="@application.css">
+         <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToAddDocumentScene" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="ADD DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="225.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToRemoveDocumentScene" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="REMOVE DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="440.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToUpdateDocumentScene" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="UPDATE DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#switchToFindDocumentScene" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="FIND DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="225.0" layoutY="160.0" mnemonicParsing="false" onAction="#switchToDisplayDocumentScene" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="DISPLAY DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="440.0" layoutY="160.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="ADD USER" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="310.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="BORROW DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="222.0" layoutY="310.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="RETURN DOCUMENT" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="440.0" layoutY="310.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="175.0" styleClass="nav-form" stylesheets="@application.css" text="DISPLAY USER INFO" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="256.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../java/org/example/myjavafxapp/9131529.png" />
+            <Image url="@photo-library-icon-3.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="369.0" layoutY="57.0" text="Library Management System">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
